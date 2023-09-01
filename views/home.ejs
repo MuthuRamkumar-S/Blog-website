@@ -1,0 +1,13 @@
+<%- include("partials/header") %> 
+
+<h1>Home</h1>
+<p><%= start %> </p>
+
+<br>
+<% for(let i = 0; i<content.length; i++){ %>
+    <h1><%= content[i].title %> </h1>
+    <p class = "truncate"><%= content[i].body.substring(0,100) + "...  " %><a href="/posts/<%= content[i].title %>">Read more</a> </p>
+<% } %>
+
+
+<%- include("partials/footer") %> 
